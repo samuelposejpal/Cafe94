@@ -1,0 +1,84 @@
+//Samuel Posejpal
+package views;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.TableView;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import models.Customer;
+
+package org.o7planning.javafx.spinner;
+
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.Spinner;
+import javafx.scene.control.SpinnerValueFactory;
+import javafx.scene.layout.FlowPane;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+
+import static javafx.application.Application.launch;
+
+public class foodMenuController implements Initializable {
+    @FXML public button ContinueButton;
+    @FXML public button GoBack;
+    @FXML public button GoHome;
+    @FXML public Spinner<Integer> foodMenuClick;
+
+    //foodMenuModel = new foodMenuModel
+
+    @FXML
+    public void ContinueButtonPushed(ActionEvent event) {
+        Parent requestApprove = FXMLLoader.load(getClass().getResource("foodSelection.fxml"));
+        Scene requestApproveScene = new Scene(requestApprove);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(requestApproveScene);
+        window.show();
+    }
+
+    //Label label = new Label("Daily Special:");
+    //final Spinner<Integer> spinner = new Spinner<Integer>();
+    //final int initialValue = 0;
+
+    @FXML
+    public void goHomePage(ActionEvent event) throws IOException {
+        Parent bookingToHome = FXMLLoader.load(getClass().getResource("loginimproved.fxml"));
+        Scene bookingToHomeScene = new Scene(bookingToHome);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(bookingToHomeScene);
+        window.show();
+    }
+    @FXML
+    public void goBack          (ActionEvent event) throws IOException {
+        Parent           = FXMLLoader.load(getClass().getResource("         .fxml"));
+        Scene           = new Scene(         );
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(            );
+        window.show();
+    }
+    @Override
+    public void initialize(ResourceBundle resourceBundle, URL url ) {
+
+        /**
+         * Setting spinner and items can have value from 1 to 100
+         * TO DO: do this for every item including special
+         */
+        SpinnerValueFactory<Integer> foodMenuFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 0);
+        this.foodMenuClick.setValueFactory(foodMenuFactory);
+        foodMenuClick.setEditable(true);
+    }
+
+
+
+    }
