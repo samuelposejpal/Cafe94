@@ -1,0 +1,61 @@
+//Samuel Posejpal
+package views;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.TableView;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import models.Customer;
+
+import java.io.IOException;
+
+import static javafx.application.Application.launch;
+
+public class FoodSelectionController implements Initializable {
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        //TO DO: initialize order here
+    }
+
+    @FXML
+    public button PlaceOrderButton;
+    @FXML
+    public button goHome;
+    @FXML
+    public button boBack
+    
+    
+    @FXML
+    public void placeOrderButtonPushed(ActionEvent event) {
+        Parent requestApprove = FXMLLoader.load(getClass().getResource("OrderType.fxml"));
+        Scene requestApproveScene = new Scene(requestApprove);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(OrderTypeScene);
+        window.show();
+    }
+    @FXML
+    public void goBack          (ActionEvent event) throws IOException {
+        Parent           = FXMLLoader.load(getClass().getResource("           .fxml"));
+        Scene            = new Scene(           );
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(            );
+        window.show();
+    }
+    @FXML
+    public void goHomePage(ActionEvent event) throws IOException {
+        Parent bookingToHome = FXMLLoader.load(getClass().getResource("loginimproved.fxml"));
+        Scene bookingToHomeScene = new Scene(bookingToHome);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(bookingToHomeScene);
+        window.show();
+    }
+}
