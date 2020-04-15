@@ -24,30 +24,29 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import static javafx.application.Application.launch;
 
-@FXML
-private Spinner <Integer> DailySpecialClick;
-@FXML
-private Spinner<Integer> GarlicBreadClick;
-@FXML
-private Spinner<Integer> TomatoSoupClick;
-@FXML
-private Spinner<Integer> CheesburgerAndChipsClick;
-@FXML
-private Spinner<Integer> CaesarSaladClick;
-@FXML
-private Spinner<Integer> SpagettiBologneseClick;
-@FXML
-private Spinner<Integer> FishAndChipsClick;
-@FXML
-private Spinner<Integer> VegetarianChilliClick;
-@FXML
-private Spinner<Integer> CocaColaClick;
-@FXML
-private Spinner<Integer> OrangeJuiceClick;
-
-
-
 public class foodMenuController implements Initializable {
+
+@FXML public Spinner <Integer> DailySpecialClick;
+@FXML
+public Spinner<Integer> GarlicBreadClick;
+
+@FXML
+public Spinner<Integer> TomatoSoupClick;
+@FXML
+public Spinner<Integer> CheesburgerAndChipsClick;
+@FXML
+public Spinner<Integer> CaesarSaladClick;
+@FXML
+public Spinner<Integer> SpagettiBologneseClick;
+@FXML
+public Spinner<Integer> FishAndChipsClick;
+@FXML
+public Spinner<Integer> VegetarianChilliClick;
+@FXML
+public Spinner<Integer> CocaColaClick;
+@FXML
+public Spinner<Integer> OrangeJuiceClick;
+
     @FXML public button ContinueButton;
     @FXML public button GoBack;
     @FXML public button GoHome;
