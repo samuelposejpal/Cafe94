@@ -1,5 +1,10 @@
 package sample;
 
+/**
+ * This class represents a Chef for the restaurant.
+ * @author Emily Wells.
+ * @version 1.0.
+ */
 public class Chef extends Staff {
     /**
      * This is the constructor for a staff object
@@ -8,8 +13,9 @@ public class Chef extends Staff {
      * @param firstName_
      * @param lastName_
      */
-    public Chef(int userID_, String firstName_, String lastName_) {
-        super(userID_, firstName_, lastName_);
+    public Chef(int userID_, String firstName_, String lastName_, String staffType_) {
+
+        super(userID_, firstName_, lastName_, staffType_);
     }
 
     /**
@@ -30,3 +36,4 @@ public class Chef extends Staff {
         return;
     }
 }
+

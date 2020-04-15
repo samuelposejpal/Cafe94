@@ -1,7 +1,17 @@
 package sample;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
+/**
+ * This is the abstract class to create a user of the system. Superclass to Staff and Customer.
+ * @author Emily Wells.
+ * @version 1.0.
+ */
 public abstract class User {
     /**
      * Instance variables for a user.
@@ -61,41 +71,7 @@ public abstract class User {
      * This method allows the user to login. However this is specified in the specific user class, for example a staff member login, and customer login.
      * @overide login
      */
-
-    public boolean login(int userID) {
-        //TO DO: if the ID is in the database it returns true, else if returns false
-        String url = "jdbc.mysql://localhost:8800/restaurant_database";
-        boolean exists = false;
-
-        try {
-            Connection conn = DriverManager.getConnection(url, "root", "Aishai3f");
-            Statement statement = conn.createStatement();
-            String sql = "SELECT EXISTS(SELECT * from UserProfile WHERE (Id = 'userID') & (UserType = 'Customer'));";
-            ResultSet resultSet = statement.executeQuery(sql);
-            if (isFilled(resultSet))
-                exists = true;
-
-            while(resultSet.next()) {
-                System.out.println(resultSet.getString("Menu_Item"));
-            }
-
-        } catch (SQLException var5) {
-            System.out.println("Error connecting to DB: " + var5.getMessage());
-        }
-        return exists;
-    }
-
-    public static boolean isFilled(ResultSet resultSet){
-        boolean isEmpty = true;
-        try {
-            while(resultSet.next()){
-                isEmpty = false;
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return !isEmpty;
-    }
+    public abstract boolean login(int userID);
 
     // "toString" is a standardised name (in a sense -- actually it
     // "overrides" the (empty) method as it comes in the automatic
@@ -103,4 +79,6 @@ public abstract class User {
     public String toString() {
         return "userID=" + userID + ", name=\"" + firstName + " " + lastName;
     }
+
+
 }

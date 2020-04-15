@@ -13,17 +13,18 @@ public class DeliveryDriver extends Staff {
      * @param firstName_
      * @param lastName_
      */
-    public DeliveryDriver(int userID_, String firstName_, String lastName_) {
-        super(userID_, firstName_, lastName_);
+    public DeliveryDriver(int userID_, String firstName_, String lastName_, String staffType_) {
+
+        super(userID_, firstName_, lastName_, staffType_);
     }
 
     /**
      * This returns a customer address for delivery purposes.
-     * @param userID
      * @return
      */
-    public String getAddress(int userID){
-        String address = Customer.get_address(userID);
+    public String getAddress(){
+        String address = Customer.get_address();
         return address;
     }
 }
+

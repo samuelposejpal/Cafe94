@@ -6,18 +6,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import static sample.Report.mostPopularItem;
-
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-
-        Parent root = FXMLLoader.load(getClass().getResource("bookingRequest.fxml"));
-        primaryStage.setTitle("Application Test");
-        primaryStage.setScene(new Scene(root, 729, 564));
+        Parent root = FXMLLoader.load(getClass().getResource("loginPage.fxml"));
+        primaryStage.setTitle("Login");
+        primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
-        mostPopularItem();
     }
 
 

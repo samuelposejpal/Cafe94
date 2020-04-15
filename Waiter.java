@@ -7,6 +7,7 @@ package sample;
  */
 public class Waiter extends Staff{
 
+
     /**
      * This is the constructor for a staff object
      *
@@ -14,8 +15,8 @@ public class Waiter extends Staff{
      * @param firstName_
      * @param lastName_
      */
-    public Waiter(int userID_, String firstName_, String lastName_) {
-        super(userID_, firstName_, lastName_);
+    public Waiter(int userID_, String firstName_, String lastName_, String staffType_) {
+        super(userID_, firstName_, lastName_, staffType_);
     }
 
     public boolean approveTableBooking(int orderID){
@@ -28,3 +29,4 @@ public class Waiter extends Staff{
         return available;
     }
 }
+
