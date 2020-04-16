@@ -57,7 +57,7 @@
                 <RowConstraints maxHeight="107.5999755859375" minHeight="10.0" prefHeight="57.39998779296877" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <Button fx:id="menuButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="405.0" style="-fx-background-color: #80B8D1;" text="Menu " textFill="WHITE" GridPane.columnSpan="2">
+                <Button fx:id="menuButton" mnemonicParsing="false" onAction="#menuButtonPushed"prefHeight="26.0" prefWidth="405.0" style="-fx-background-color: #80B8D1;" text="Menu " textFill="WHITE" GridPane.columnSpan="2">
                     <font>
                         <Font size="20.0" />
                     </font>
