@@ -19,6 +19,9 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
+/**
+*This class controlls the customer profile page. 
+*/
 public class CustomerProfileController implements Initializable {
 
 
@@ -63,7 +66,7 @@ public class CustomerProfileController implements Initializable {
     }
 
     /**
-     * This will take the Staff member back to the staff homepage.
+     * This will take the cutomer back to the homepage.
      */
     public void homeButtonPushed(ActionEvent event) throws IOException {
         //create a scene base on the loaded FXML scene graph
@@ -71,6 +74,10 @@ public class CustomerProfileController implements Initializable {
         sc.changeScenes(event, "customerMenu.fxml", "Homepage");
     }
 
+
+    /**
+     * This will take the Customer to edit their profile.
+     */
     public void editProfileButtonPushed(ActionEvent event) throws IOException {
         //create a scene base on the loaded FXML scene graph
         SceneChanger sc = new SceneChanger();
@@ -78,7 +85,7 @@ public class CustomerProfileController implements Initializable {
     }
 
     /**
-     * This will take the Customer back to their homepage.
+     * This will take the Customer back to the login page.
      */
     public void logoutButtonPushed(ActionEvent event) throws IOException {
         //create a scene base on the loaded FXML scene graph
