@@ -1,6 +1,6 @@
 package sample; /**
  * New Profile Controller Class.
- * @author Emily Wells
+ * @author Emily Wells and Niamh Murphy-Mauchline
  */
 
 import javafx.event.ActionEvent;
@@ -40,13 +40,10 @@ public class NewProfileController implements Initializable {
     private PreparedStatement pst;
 
 
-
-
-    /**
-     * This will update the changes made to a user profile, when the button is pushed and take the user back to the profile page.
-     * @param event
-     * @throws IOException
+     /**
+     * This will take the Customer back to the login page.
      */
+
     @FXML
     public void cancelButtonPushed(ActionEvent event) throws IOException {
 
@@ -54,8 +51,11 @@ public class NewProfileController implements Initializable {
         sc.changeScenes(event, "loginPage.fxml", "Login Page");
     }
 
+   
     /**
-     * This will take the Customer back to their homepage.
+     * This will populate a tuple in the table UserProfile in the database and then return the user to the login page to login.
+     * @param event
+     * @throws IOException
      */
     @FXML
     public void createProfileButtonPushed(ActionEvent event) throws IOException, SQLException {
@@ -86,6 +86,8 @@ public class NewProfileController implements Initializable {
         window.setScene(createProfileBScene);
         window.show();
     }
+    
+    /** A method to generate a String of the user ID that has been entered in the system for use in another scene.*/
     public String enteredID() throws SQLException {
         String insert = "SELECT ID FROM UserProfile WHERE ID = ?)";
 
