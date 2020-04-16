@@ -1,5 +1,6 @@
 package sample;
-//Samuel Posejpal
+/** 
+*@author Samuel Posejpal */
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -48,7 +49,7 @@ public class waiterFoodMenuController implements Initializable {
     @FXML public Spinner<Integer> foodMenuClick;
 
     //foodMenuModel = new foodMenuModel
-
+    /** Changes scene to an order complete scene */
     @FXML
     public void ContinueButtonPushed(ActionEvent event) throws IOException {
         Parent requestApprove = FXMLLoader.load(getClass().getResource("orderCompleted.fxml"));
@@ -62,7 +63,7 @@ public class waiterFoodMenuController implements Initializable {
     //Label label = new Label("Daily Special:");
     //final Spinner<Integer> spinner = new Spinner<Integer>();
     //final int initialValue = 0;
-
+    /** returns the user to the login page when the button is pressed*/
     @FXML
     public void goHomePage(ActionEvent event) throws IOException {
         Parent bookingToHome = FXMLLoader.load(getClass().getResource("loginimproved.fxml"));
@@ -72,7 +73,7 @@ public class waiterFoodMenuController implements Initializable {
         window.setScene(bookingToHomeScene);
         window.show();
     }
-
+    /** Takes the user back one scene*/
     @FXML
     public void goBack(ActionEvent event) throws IOException {
         Parent backOne = FXMLLoader.load(getClass().getResource("waiterMenu.fxml"));
@@ -82,7 +83,7 @@ public class waiterFoodMenuController implements Initializable {
         window.setScene(backOneScene);
         window.show();
     }
-
+    /** Initialises the controller class and sets up the different spinners for choosing the quantity of items*/
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
