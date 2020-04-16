@@ -33,11 +33,6 @@
                 <HBox alignment="CENTER" prefHeight="80.0" prefWidth="418.0" />
                 <HBox alignment="CENTER" prefHeight="80.0" prefWidth="226.0">
                     <children>
-                        <ImageView fitHeight="63.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../../home.png" />
-                            </image>
-                        </ImageView>
                     </children>
                 </HBox>
             </children>
@@ -46,8 +41,7 @@
             <children>
                 <AnchorPane prefHeight="54.0" prefWidth="714.0">
                     <children>
-                        <Button fx:id="homeButton" layoutX="630.0" layoutY="14.0" mnemonicParsing="false" onAction="#homebuttonPushed" text="Home" />
-                        <Label fx:id="errMsgLabel" layoutX="41.0" layoutY="19.0" text="Label" />
+                        <Button fx:id="logoutButton" layoutX="630.0" layoutY="14.0" mnemonicParsing="false" onAction="#logoutButtonPushed" text="logout" />
                     </children>
                 </AnchorPane>
             </children></HBox>
@@ -77,7 +71,7 @@
                         <Font size="20.0" />
                     </font>
                 </Button>
-                <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="423.0" style="-fx-background-color: #80B8D1;" text="History" textFill="WHITE" GridPane.columnSpan="2" GridPane.rowIndex="10">
+                <Button fx:id="historyButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="423.0" style="-fx-background-color: #80B8D1;" text="History" textFill="WHITE" GridPane.columnSpan="2" GridPane.rowIndex="10">
                     <font>
                         <Font size="20.0" />
                     </font>
@@ -97,7 +91,7 @@
                         <Font size="20.0" />
                     </font>
                 </Button>
-                <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="382.0" style="-fx-background-color: #80B8D1;" text="User Management" textFill="WHITE" GridPane.columnSpan="2" GridPane.rowIndex="8">
+                <Button fx:id="userManagementButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="382.0" style="-fx-background-color: #80B8D1;" text="User Management" textFill="WHITE" GridPane.columnSpan="2" GridPane.rowIndex="8">
                     <font>
                         <Font size="20.0" />
                     </font>
@@ -106,4 +100,3 @@
         </GridPane>
     </children>
 </GridPane>
-

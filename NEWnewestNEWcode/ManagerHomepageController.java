@@ -16,11 +16,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class ManagerHomepageController implements Initializable {
+public class ManagerHomepageController {
     @FXML
-    private Label errMsgLabel;
-    @FXML
-    private Button homeButton;
+    private Button logoutButton;
     @FXML
     private Button staffProfilesButton;
     @FXML
@@ -35,20 +33,10 @@ public class ManagerHomepageController implements Initializable {
     private Button historyButton;
 
     /**
-     * Initialises controller class.
-     */
-    @Override
-    public void initialize(URL url, ResourceBundle rb){
-
-        errMsgLabel.setText("");
-
-    }
-
-    /**
      * This method will take the manager back to the main staff homepage.
      */
-    public void homeButtonPushed(ActionEvent event) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource("/sample/StaffHome.fxml"));
+    public void logoutButtonPushed(ActionEvent event) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("/sample/loginPage.fxml"));
         Scene scene = new Scene(parent);
     }
 
