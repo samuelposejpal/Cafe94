@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="729.0" style="-fx-background-color: #DE6B53;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.bookingRequestController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" maxWidth="176.79996337890626" minWidth="5.333350563049315" prefWidth="14.2" />
+        <ColumnConstraints hgrow="ALWAYS" maxWidth="709.8666494369506" minWidth="10.0" prefWidth="699.8" />
+        <ColumnConstraints hgrow="ALWAYS" maxWidth="151.80000000000007" minWidth="6.4666748046875" prefWidth="13.93328857421875" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="80.0" minHeight="65.0" prefHeight="72.59999084472656" vgrow="ALWAYS" />
+        <RowConstraints maxHeight="410.4" minHeight="5.0" prefHeight="18.799999999999997" vgrow="ALWAYS" />
+        <RowConstraints maxHeight="442.4000350952149" minHeight="10.0" prefHeight="390.0" vgrow="ALWAYS" />
+        <RowConstraints maxHeight="387.1999816894531" minHeight="0.0" prefHeight="19.26665039062499" vgrow="ALWAYS" />
+        <RowConstraints maxHeight="60.0" minHeight="5.20001220703125" prefHeight="55.20000610351565" vgrow="ALWAYS" />
+    </rowConstraints>
+    <children>
+        <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #E14F30;" GridPane.columnSpan="3">
+            <children>
+                <HBox alignment="CENTER" prefHeight="80.0" prefWidth="188.0">
+                    <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=" Café 94" wrappingWidth="202.9367332458496">
+                            <font>
+                                <Font name="Trebuchet MS" size="52.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="80.0" prefWidth="418.0" />
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Button fx:id="homeClick" mnemonicParsing="false" onAction="#goHomePage" style="-fx-background-color: #80B8D1;" text="Home " textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" prefHeight="72.0" prefWidth="730.0" style="-fx-background-color: #E14F30;" GridPane.columnSpan="3" GridPane.rowIndex="4">
+         <children>
+            <HBox alignment="CENTER" prefHeight="58.0" prefWidth="119.0">
+               <children>
+                  <Button fx:id="backClick" mnemonicParsing="false" onAction="#goBackBookingHome" prefHeight="30.0" prefWidth="55.0" style="-fx-background-color: #80B8D1;" text="&lt;--" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children></HBox>
+        <GridPane alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="619.599967956543" minWidth="10.0" prefWidth="71.39998321533204" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="490.60001449584956" minWidth="10.0" prefWidth="281.7999755859375" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="343.60003662109375" minWidth="10.0" prefWidth="270.60002441406243" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="649.7999908447265" minWidth="10.0" prefWidth="80.00004882812505" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="216.00000610351563" minHeight="10.0" prefHeight="41.19998779296875" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="304.0000244140625" minHeight="10.0" prefHeight="100.40001220703124" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="304.0000244140625" minHeight="10.0" prefHeight="104.80000000000001" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="304.0000244140625" minHeight="10.0" prefHeight="104.80000000000001" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="167.39999999999998" minHeight="10.0" prefHeight="43.00003662109373" vgrow="SOMETIMES" />
+            </rowConstraints>
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #fff;" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.rowSpan="3">
+               <children>
+                  <DatePicker id="bookingDate" fx:id="DateClick" layoutX="14.0" layoutY="57.0" onAction="#chooseDate" promptText="Booking Date" />
+                  <Text layoutX="14.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Arrival time " wrappingWidth="86.13678169250488" />
+                  <Text layoutX="14.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Departure time " wrappingWidth="86.13678169250488" />
+                  <Spinner fx:id="guestsClick" layoutX="290.0" layoutY="57.0" prefHeight="25.0" prefWidth="68.0" />
+                  <Text layoutX="290.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How many guests? " wrappingWidth="136.536714553833" />
+                  <Text layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Booking Details " wrappingWidth="214.1367588043213">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="notesClick" alignment="TOP_LEFT" layoutX="218.0" layoutY="128.0" prefHeight="92.0" prefWidth="261.0" promptText="Anything you would like to let us know?  " />
+                  <Button fx:id="requestClick" layoutX="356.0" layoutY="254.0" mnemonicParsing="false" onAction="#goRequestApprove" prefHeight="31.0" prefWidth="174.0" style="-fx-background-color: #80B8D1;" text="Request Booking " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Pane layoutX="14.0" layoutY="119.0" prefHeight="49.0" prefWidth="55.0">
+                     <children>
+                        <Label layoutX="21.0" layoutY="6.0" text="Hr" textFill="#949191" />
+                        <TextField fx:id="arriveHr" layoutX="-2.0" layoutY="22.0" prefHeight="27.0" prefWidth="55.0" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="92.0" layoutY="119.0" prefHeight="49.0" prefWidth="55.0">
+                     <children>
+                        <Label layoutX="17.0" layoutY="6.0" text="Min" textFill="#a49e9e" />
+                        <TextField fx:id="arriveMin" layoutX="-2.0" layoutY="22.0" prefHeight="27.0" prefWidth="55.0" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="14.0" layoutY="190.0" prefHeight="49.0" prefWidth="55.0">
+                     <children>
+                        <Label layoutX="21.0" layoutY="6.0" text="Hr" textFill="#949090" />
+                        <TextField fx:id="departHr" layoutX="1.0" layoutY="22.0" prefHeight="27.0" prefWidth="55.0" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="92.0" layoutY="190.0" prefHeight="49.0" prefWidth="55.0">
+                     <children>
+                        <Label layoutX="17.0" layoutY="6.0" text="Min" textFill="#868181" />
+                        <TextField fx:id="departMin" layoutX="1.0" layoutY="22.0" prefHeight="27.0" prefWidth="55.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+        </GridPane>
+    </children>
+</GridPane>

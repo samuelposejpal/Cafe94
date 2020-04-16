@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="532.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="229.79998779296875" minWidth="10.0" prefWidth="49.59999389648438" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="628.8" minWidth="10.0" prefWidth="622.4000061035156" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="268.79997558593755" minWidth="10.0" prefWidth="58.40003662109382" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="209.20002288818358" minHeight="0.0" prefHeight="72.59999084472656" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="351.2000183105469" minHeight="0.0" prefHeight="12.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="401.6000244140625" minHeight="10.0" prefHeight="392.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="462.3999816894531" minHeight="3.9999755859374773" prefHeight="9.400012207031239" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="394.3999755859375" minHeight="10.0" prefHeight="47.60002441406249" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <HBox alignment="CENTER_LEFT" prefHeight="73.0" prefWidth="749.0" style="-fx-background-color: #E14F30;" GridPane.columnIndex="3" GridPane.columnSpan="3">
+            <children>
+                <HBox alignment="CENTER" prefHeight="73.0" prefWidth="183.0">
+                    <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=" Café 94" wrappingWidth="193.13674545288086">
+                            <font>
+                                <Font name="Trebuchet MS" size="52.0" />
+
+                            </font>
+                        </Text>
+                    </children>
+                </HBox>
+                <HBox prefHeight="73.0" prefWidth="496.0" />
+                <HBox alignment="CENTER" prefHeight="73.0" prefWidth="246.0">
+                    <children>
+                        <Button mnemonicParsing="false" style="-fx-background-color: #80B8D1;" text="Home " textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" prefHeight="74.0" prefWidth="603.0" style="-fx-background-color: #E14F30;" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="4">
+         <children>
+            <HBox alignment="CENTER" prefHeight="48.0" prefWidth="151.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="55.0" style="-fx-background-color: #80B8D1;" text="&lt;--" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children></HBox>
+        <HBox prefHeight="10.0" prefWidth="730.0" style="-fx-background-color: DE6B53;" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+        <HBox prefHeight="1.0" prefWidth="730.0" style="-fx-background-color: DE6B53;" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="3" />
+        <HBox alignment="CENTER" prefHeight="392.0" prefWidth="709.0" style="-fx-background-color: DE6B53;" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="2">
+         <children>
+            <GridPane alignment="CENTER_LEFT" prefHeight="392.0" prefWidth="675.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="383.1999755859375" minWidth="10.0" prefWidth="370.40001220703124" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.60003662109375" minWidth="0.0" prefWidth="24.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="337.79998779296875" minWidth="10.0" prefWidth="281.59999999999997" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="178.59997787475587" minHeight="10.0" prefHeight="142.59999389648436" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="178.59997787475587" minHeight="3.8000244140625057" prefHeight="23.800024414062506" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="178.59997787475587" minHeight="10.0" prefHeight="105.39997558593748" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="125.59996643066407" minHeight="0.0" prefHeight="39.200051879882835" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="204.00003356933593" minHeight="10.0" prefHeight="133.99998779296874" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ScrollPane prefHeight="349.0" prefWidth="371.0" GridPane.rowSpan="5">
+                     <content>
+                        <GridPane alignment="CENTER" prefHeight="546.0" prefWidth="372.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="293.9999694824219" minWidth="10.0" prefWidth="293.9999694824219" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.4000244140625" minWidth="10.0" prefWidth="78.00003051757812" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity" wrappingWidth="56.78009033203125" GridPane.columnIndex="1" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity" wrappingWidth="56.78009033203125" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity" wrappingWidth="56.78009033203125" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity" wrappingWidth="56.78009033203125" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity" wrappingWidth="56.78009033203125" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity" wrappingWidth="56.78009033203125" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity" wrappingWidth="56.78009033203125" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity" wrappingWidth="56.78009033203125" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity" wrappingWidth="56.78009033203125" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity" wrappingWidth="56.78009033203125" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Item" textAlignment="CENTER" wrappingWidth="59.871097564697266">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Item" textAlignment="CENTER" wrappingWidth="59.871097564697266" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Item" textAlignment="CENTER" wrappingWidth="59.871097564697266" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Item" textAlignment="CENTER" wrappingWidth="59.871097564697266" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Item" textAlignment="CENTER" wrappingWidth="59.871097564697266" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Item" textAlignment="CENTER" wrappingWidth="59.871097564697266" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Item" textAlignment="CENTER" wrappingWidth="59.871097564697266" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Item" textAlignment="CENTER" wrappingWidth="59.871097564697266" GridPane.rowIndex="7">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Item" textAlignment="CENTER" wrappingWidth="59.871097564697266" GridPane.rowIndex="8">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Item" textAlignment="CENTER" wrappingWidth="59.871097564697266" GridPane.rowIndex="9">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+                  <Button mnemonicParsing="false" prefHeight="59.0" prefWidth="282.0" style="-fx-background-color: #80B8D1;" text="Edit" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="59.0" prefWidth="282.0" style="-fx-background-color: #00cc44;" text="Place Order" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Table Number " textAlignment="CENTER" wrappingWidth="106.9367094039917">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Spinner prefHeight="26.0" prefWidth="82.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+         </children>
+        </HBox>
+    </children>
+</GridPane>
