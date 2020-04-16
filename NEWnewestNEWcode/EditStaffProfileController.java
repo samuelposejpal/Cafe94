@@ -40,7 +40,7 @@ public class EditStaffProfileController extends ControllerClass implements Initi
 
 
     /**
-     * This will update the changes made to a user profile, when the button is pushed and take the user back to the profile page.
+     * This will update the changes made to a staff profile, when the button is pushed and take the user back to the profile page.
      * @param event
      * @throws IOException
      */
@@ -68,7 +68,7 @@ public class EditStaffProfileController extends ControllerClass implements Initi
     }
 
     /**
-     * This will take the Customer back to their homepage.
+     * This will take the staff back to their homepage.
      */
     public void homeButtonPushed(ActionEvent event) throws IOException {
         //create a scene base on the loaded FXML scene graph
@@ -78,7 +78,7 @@ public class EditStaffProfileController extends ControllerClass implements Initi
     }
 
     /**
-     * This method will update the view with a user object preloaded for an edit.
+     * This method will update the view with a staff object preloaded for an edit.
      * @param user
      */
     @Override
@@ -104,7 +104,7 @@ public class EditStaffProfileController extends ControllerClass implements Initi
     }
 
     /**
-     * This method will read from the GUI fields and update the user object.
+     * This method will read from the GUI fields and update the staff object.
      */
     public void updateUser(){
         staff.setFirstName(firstName.getText());
@@ -113,7 +113,7 @@ public class EditStaffProfileController extends ControllerClass implements Initi
     }
 
     /**
-     * Preloads the data for the current user.
+     * Preloads the data for the current staff.
      * @param staffToEdit
      */
     public void preloadData(Staff staffToEdit){
