@@ -12,7 +12,7 @@ import sample.dbconnection;
 
 public class loginModel {
     Connection connection;
-
+    /** Method to establish connection to database*/
     public loginModel(){
         try{
             this.connection = dbconnection.getConnection();
@@ -29,7 +29,7 @@ public class loginModel {
     public boolean isDBConnected(){
         return this.connection != null;
     }
-
+    /** Verify that a userID exists in the database to grant access to a user depending on their use type */
     public boolean isLogin(String userid, String opt) throws Exception{
 
         PreparedStatement ps = null;
