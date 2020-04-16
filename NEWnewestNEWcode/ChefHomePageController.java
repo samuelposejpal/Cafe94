@@ -13,6 +13,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+*This is the controller file for the chef home page. 
+*/
 public class ChefHomePageController implements Initializable {
     @FXML private Label errMsgLabel;
     @FXML private Button profileButton;
@@ -31,19 +34,7 @@ public class ChefHomePageController implements Initializable {
         SceneChanger sc = new SceneChanger();
         sc.changeScenes(event, "/sample/StaffProfileView.fxml", "Staff Profile");
     }
-
-    //TODO
-    /*
-     * This will allow the chef to view completed orders so they know to take the food to the table.
-     * @param event
-     */
-    /*public void completedOrdersButtonPushed(ActionEvent event) throws IOException {
-        //create a scene base on the loaded FXML scene graph
-        SceneChanger sc = new SceneChanger();
-        sc.changeScenes(event, "CompletedOrdersView.fxml", "Completed Orders");
-    }*/
-
-    //TODO
+    
     /*
      * This will allow the chef view orders that are pending.
      * @param event
@@ -54,18 +45,7 @@ public class ChefHomePageController implements Initializable {
         sc.changeScenes(event, "CurrentOrdersView.fxml", "Current Orders");
     }*/
 
-    //TODO
-    /*
-     * This will allow the chef to......
-     * @param event
-     */
-    /*public void menuManagementButtonPushed(ActionEvent event) throws IOException {
-        //create a scene base on the loaded FXML scene graph
-        SceneChanger sc = new SceneChanger();
-        sc.changeScenes(event, "menuManagementView.fxml", "Manage Menu");
-    }*/
-
-
+  
     /**
      * Initialises controller class.
      */
