@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="532.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="532.0" prefWidth="730.0" type="GridPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.bookingMenuController.foodMenuController">
     <columnConstraints>
         <ColumnConstraints />
         <ColumnConstraints />
@@ -64,7 +64,7 @@
             </HBox>
             <HBox alignment="CENTER_RIGHT" prefHeight="48.0" prefWidth="450.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="138.0" style="-fx-background-color: #80B8D1;" text="Continue" textFill="WHITE">
+                  <Button fx:id="ContinueButton" mnemonicParsing="false" onAction="#ContinueButtonPushed" prefHeight="27.0" prefWidth="138.0" style="-fx-background-color: #80B8D1;" text="Continue" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
@@ -109,40 +109,40 @@
                               </font>
                           </Text>
                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Garlic Bread" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                          <Spinner fx:id="grlcbrd" editable="true" max="100" min="0" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                          <Spinner fx:id="GarlicBreadClick" editable="true" max="100" min="0" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tomato Soup" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                          <Spinner fx:id="tmtsp" editable="true" max="100" min="0" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                          <Spinner fx:id="TomatoSoupClick" editable="true" max="100" min="0" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mains" GridPane.columnIndex="1" GridPane.rowIndex="5">
                               <font>
                                   <Font size="20.0" />
                               </font>
                           </Text>
                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cheesburger and Chips" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                          <Spinner fx:id="chsbrgr" editable="true" max="100" min="0" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                          <Spinner fx:id="CheesburgerAndChipsClick" editable="true" max="100" min="0" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ceasar Salad" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                          <Spinner fx:id="csrsld" editable="true" max="100" min="0" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                          <Spinner fx:id="CaesarSaladClick" editable="true" max="100" min="0" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="7" />
                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Spaghetti Bolognese" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-                          <Spinner fx:id="spgbl" editable="true" max="100" min="0" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                          <Spinner fx:id="SpagettiBologneseClick" editable="true" max="100" min="0" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="8" />
                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Fish and Chips" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-                          <Spinner fx:id="fshnchps" editable="true" max="100" min="0" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                          <Spinner fx:id="FishAndChipsClick" editable="true" max="100" min="0" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="9" />
                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Vegetarian Chilli" GridPane.columnIndex="1" GridPane.rowIndex="11" />
-                          <Spinner fx:id="vgchll" editable="true" max="100" min="0" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+                          <Spinner fx:id="VegetarianChilliClick" editable="true" max="100" min="0" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="11" />
                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Drinks" GridPane.columnIndex="1" GridPane.rowIndex="12">
                               <font>
                                   <Font size="20.0" />
                               </font>
                           </Text>
                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Coca Cola " wrappingWidth="105.33674621582031" GridPane.columnIndex="1" GridPane.rowIndex="13" />
-                          <Spinner fx:id="coke" editable="true" max="100" min="0" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="13" />
+                          <Spinner fx:id="CocaColaClick" editable="true" max="100" min="0" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="13" />
                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Orange Juice" GridPane.columnIndex="1" GridPane.rowIndex="14" />
-                          <Spinner fx:id="orngjc" editable="true" max="100" min="0" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="14" />
+                          <Spinner fx:id="OrangeJuiceClick" editable="true" max="100" min="0" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="14" />
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Daily Special" wrappingWidth="136.3241958618164">
                            <font>
                               <Font size="20.0" />
                            </font>
                         </Text>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Chef args here " wrappingWidth="138.72916412353516" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Spinner fx:id="grlcbrd1" editable="true" max="100" min="0" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Spinner fx:id="DailySpecialClick" editable="true" max="100" min="0" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                       </children>
                   </GridPane>
                </content>
@@ -150,4 +150,4 @@
          </children>
       </HBox>
     </children>
-</GridPane>
+</fx:root>

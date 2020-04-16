@@ -1,5 +1,5 @@
 package sample;
-/** @author Samuel Posejpal */
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,7 +16,7 @@ import static javafx.application.Application.launch;
 
 public class thankyouOrderController implements Initializable {
 
-    /** Returns the user to the login page when the button is pushed*/
+
     @FXML
     public void goHomePage(ActionEvent event) throws IOException {
         Parent bookingToHome = FXMLLoader.load(getClass().getResource("loginimproved.fxml"));
@@ -26,8 +26,4 @@ public class thankyouOrderController implements Initializable {
         window.setScene(bookingToHomeScene);
         window.show();
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
-    }
 }
