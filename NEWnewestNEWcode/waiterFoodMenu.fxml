@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="532.0" prefWidth="730.0" type="GridPane" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.waiterFoodMenuController">
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="229.79998779296875" minWidth="10.0" prefWidth="49.59999389648438" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="628.8" minWidth="10.0" prefWidth="622.4000061035156" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="268.79997558593755" minWidth="10.0" prefWidth="58.40003662109382" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="209.20002288818358" minHeight="0.0" prefHeight="72.59999084472656" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="351.2000183105469" minHeight="0.0" prefHeight="12.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="401.6000244140625" minHeight="10.0" prefHeight="392.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="462.3999816894531" minHeight="3.9999755859374773" prefHeight="9.400012207031239" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="394.3999755859375" minHeight="10.0" prefHeight="47.60002441406249" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <HBox alignment="CENTER_LEFT" prefHeight="73.0" prefWidth="749.0" style="-fx-background-color: #E14F30;" GridPane.columnIndex="3" GridPane.columnSpan="3">
+            <children>
+                <HBox alignment="CENTER" prefHeight="73.0" prefWidth="183.0">
+                    <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=" Café 94" wrappingWidth="193.13674545288086">
+                            <font>
+                                <Font name="Trebuchet MS" size="52.0" />
+
+                            </font>
+                        </Text>
+                    </children>
+                </HBox>
+                <HBox prefHeight="73.0" prefWidth="496.0" />
+                <HBox alignment="CENTER" prefHeight="73.0" prefWidth="246.0">
+                    <children>
+                        <Button fx:id="goHome" mnemonicParsing="false" onAction="#goHomePage" style="-fx-background-color: #80B8D1;" text="Home" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="74.0" prefWidth="603.0" style="-fx-background-color: #E14F30;" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="4">
+            <children>
+                <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="213.0">
+                    <children>
+                        <Button fx:id="goBackButton" mnemonicParsing="false" onAction="#goBack" prefHeight="30.0" prefWidth="55.0" style="-fx-background-color: #80B8D1;" text="&lt;--" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_RIGHT" prefHeight="48.0" prefWidth="450.0">
+                    <children>
+                        <Button fx:id="ContinueButton" mnemonicParsing="false" onAction="#ContinueButtonPushed" prefHeight="27.0" prefWidth="138.0" style="-fx-background-color: #80B8D1;" text="Continue" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </HBox>
+        <HBox prefHeight="10.0" prefWidth="730.0" style="-fx-background-color: DE6B53;" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+        <HBox prefHeight="1.0" prefWidth="730.0" style="-fx-background-color: DE6B53;" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="3" />
+        <HBox alignment="CENTER" prefHeight="338.0" prefWidth="730.0" style="-fx-background-color: DE6B53;" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="2">
+            <children>
+                <ScrollPane hbarPolicy="NEVER" prefHeight="378.0" prefWidth="702.0">
+                    <content>
+                        <GridPane fx:id="goBackButton" onDragDetected="#goBack" prefHeight="625.0" prefWidth="689.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="593.3333129882812" minWidth="0.0" prefWidth="10.999998807907104" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="685.2" minWidth="10.0" prefWidth="599.2000011920929" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="339.4667053222656" minWidth="10.0" prefWidth="102.66668701171875" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Starters" wrappingWidth="91.52416229248047" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Text>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Garlic Bread" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                <Spinner fx:id="GarlicBreadClick" editable="true" max="100" min="0" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tomato Soup" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                <Spinner fx:id="TomatoSoupClick" editable="true" max="100" min="0" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mains" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Text>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cheesburger and Chips" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                <Spinner fx:id="CheesburgerAndChipsClick" editable="true" max="100" min="0" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ceasar Salad" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                <Spinner fx:id="CaesarSaladClick" editable="true" max="100" min="0" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Spaghetti Bolognese" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                <Spinner fx:id="SpagettiBologneseClick" editable="true" max="100" min="0" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Fish and Chips" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                <Spinner fx:id="FishAndChipsClick" editable="true" max="100" min="0" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Vegetarian Chilli" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                                <Spinner fx:id="VegetarianChilliClick" editable="true" max="100" min="0" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Drinks" GridPane.columnIndex="1" GridPane.rowIndex="12">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Text>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Coca Cola " wrappingWidth="105.33674621582031" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+                                <Spinner fx:id="CocaColaClick" editable="true" max="100" min="0" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="13" />
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Orange Juice" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+                                <Spinner fx:id="OrangeJuiceClick" editable="true" max="100" min="0" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="14" />
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Daily Special" wrappingWidth="136.3241958618164">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Text>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Chef args here " wrappingWidth="138.72916412353516" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <Spinner fx:id="DailySpecialClick" editable="true" max="100" min="0" prefHeight="26.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                            </children>
+                        </GridPane>
+                    </content>
+                </ScrollPane>
+            </children>
+        </HBox>
+    </children>
+</fx:root>
