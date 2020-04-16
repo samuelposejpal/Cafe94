@@ -1,5 +1,5 @@
 package sample;
-
+/** @author Niamh Murphy-Mauchline */
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -44,7 +44,7 @@ public class ManagerUserSearchController{
     @FXML
     private TableColumn<Userss, String> StaffTypeColumn;
 
-    //Search an employee
+    /** a function to search for a user by ID */
         @FXML
         private void searchUser(ActionEvent actionEvent) throws ClassNotFoundException, SQLException {
             try {
@@ -59,7 +59,7 @@ public class ManagerUserSearchController{
          }
      }
 
-    //Search all Users
+
     @FXML
     private void searchUsers(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
         try {
@@ -73,8 +73,9 @@ public class ManagerUserSearchController{
         }
     }
 
-    //Initializing the controller class.
-    //This method is automatically called after the fxml file has been loaded.
+    /**Initializing the controller class.
+    *This method is automatically called after the fxml file has been loaded.
+    */
     @FXML
     private void initialize () {
         IDColumn.setCellValueFactory(cellData -> cellData.getValue().IDProperty().asObject());
@@ -85,25 +86,25 @@ public class ManagerUserSearchController{
         StaffTypeColumn.setCellValueFactory(cellData -> cellData.getValue().StaffTypeProperty());
     }
 
-    //Populate Employee
+   
     @FXML
     private void populateUsers (Userss user) throws ClassNotFoundException {
-        //Declare and ObservableList for table view
+        
         ObservableList<Userss> userData = FXCollections.observableArrayList();
-        //Add employee to the ObservableList
+        
         userData.add(user);
-        //Set items to the employeeTable
+       
         UsersTable.setItems(userData);
     }
 
-    //Set Employee information to Text Area
+    
     @FXML
     private void setUserInfoToTextArea ( Userss user) {
         resultsArea.setText("ID" + user.getID() + "First Name: " + user.getfirstName() + "\n" +
                 "Last Name: " + user.getlastName());
     }
 
-    //Populate Employee for TableView and Display Employee on TextArea
+    
     @FXML
     private void populateAndShowUser(Userss user) throws ClassNotFoundException {
         if (user != null) {
@@ -114,7 +115,7 @@ public class ManagerUserSearchController{
         }
     }
 
-    //Populate user for TableView
+    
     @FXML
     private void populateUsers (ObservableList<Userss> userData) throws ClassNotFoundException {
         //Set items to the employeeTable
@@ -122,7 +123,7 @@ public class ManagerUserSearchController{
     }
 
 
-    //Insert an user to the DB
+    
     @FXML
     private void insertUser (ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
         try {
@@ -134,7 +135,7 @@ public class ManagerUserSearchController{
         }
     }
 
-    //Delete a user with a given ID from DB
+    
     @FXML
     private void deleteUser (ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
         try {
