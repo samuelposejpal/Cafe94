@@ -1,5 +1,5 @@
 package sample;
-
+/** @author Emily Wells and Niamh Murphy-Mauchline*/
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
