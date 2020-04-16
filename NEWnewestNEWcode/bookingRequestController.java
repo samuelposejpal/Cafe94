@@ -1,5 +1,7 @@
 package sample;
-/** @author Niamh Murphy-Mauchline */
+/** 
+*@author Niamh Murphy-Mauchline 
+*/
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -51,7 +53,9 @@ public class bookingRequestController implements Initializable {
     private Connection connection;
     private PreparedStatement pst;
 
-    /** Takes the user to the login scene, logs the user out*/
+    /** 
+    *Takes the user to the login scene, logs the user out
+    */
     @FXML
     public void goHomePage(ActionEvent event) throws IOException {
         Parent bookingToHome = FXMLLoader.load(getClass().getResource("loginPage.fxml"));
