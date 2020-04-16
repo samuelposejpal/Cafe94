@@ -1,5 +1,5 @@
 package sample;
-
+/** @author Niamh Murphy-Mauchline */
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -51,6 +51,7 @@ public class bookingRequestController implements Initializable {
     private Connection connection;
     private PreparedStatement pst;
 
+    /** Takes the user to the login scene, logs the user out*/
     @FXML
     public void goHomePage(ActionEvent event) throws IOException {
         Parent bookingToHome = FXMLLoader.load(getClass().getResource("loginPage.fxml"));
@@ -60,7 +61,7 @@ public class bookingRequestController implements Initializable {
         window.setScene(bookingToHomeScene);
         window.show();
     }
-
+    /** Takes the user back to the Booking menu page */
     @FXML
     public void goBackBookingHome(ActionEvent event) throws IOException {
         Parent backBookingHome = FXMLLoader.load(getClass().getResource("bookingMenu.fxml"));
@@ -71,12 +72,13 @@ public class bookingRequestController implements Initializable {
         window.show();
     }
 
+    /** Allows the user to make selections via spinners, text and a date picker, that is then used to populate the future bookings table in the database
+    *Then takes the user to the thank you for booking page
+    */
     @FXML
-    public void goRequestApprove(ActionEvent event) throws IOException {
+    public void goRequestApprove(ActionEvent event) throws IOException, SQLException {
 
-       /* @FXML
-        public void createProfileButtonPushed(ActionEvent event) throws IOException, SQLException {
-            String insert = "INSERT INTO Past_Bookings(Booking_ID,Date_Time,Customer,Guests,Table_ID)"+
+            String insert = "INSERT INTO Future_Bookings(Booking_ID,Date_Time,Customer,Guests,Table_ID)"+
                     "VALUES (?,?,?,?,?)";
             try {
                 connection = dbconnection.getConnection();
@@ -86,15 +88,21 @@ public class bookingRequestController implements Initializable {
 
             pst = connection.prepareStatement(insert);
 
-            pst.setString(1, userIDTextField.getText());
-            pst.setString(2, firstNameTextField.getText());
-            pst.setString(3, lastNameTextField.getText());
-            pst.setString(4, addressTextField.getText());
-            pst.setNString(5,"Customer");
-            pst.setNString(6," ");
+            java.sql.Date DatePickerDate = java.sql.Date.valueOf(DateClick.getValue());
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
+            String strDate = dateFormat.format(DatePickerDate);
+
+            int value = (Integer) guestsClick.getValue();
+            String strValue = Integer.toString(value);
+
+            pst.setNString(1, "0");
+            pst.setString(2, strDate);
+            pst.setNString(3,"98765");
+            pst.setString(4, strValue);
+            pst.setNString(5,"1");
 
 
-            pst.executeUpdate();*/
+            pst.executeUpdate();
 
             Parent requestApprove = FXMLLoader.load(getClass().getResource("thankyouBooking.fxml"));
             Scene requestApproveScene = new Scene(requestApprove);
@@ -103,6 +111,8 @@ public class bookingRequestController implements Initializable {
             window.setScene(requestApproveScene);
             window.show();
 
+      
+        
     }
 
     @Override
