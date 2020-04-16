@@ -1,4 +1,5 @@
-package sample; /**
+package sample; 
+/**
  * Login Controller Class helper.
  * @author Emily Wells
  */
@@ -8,7 +9,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-
+/**
+*This class helps by connecting to the database. 
+*/
 public class LoginModel {
     Connection connection;
 
@@ -24,11 +27,15 @@ public class LoginModel {
         }
     }
 
-
+    /**
+    *This checks the database is connected connecting to the database. 
+    */
     public boolean isDBConnected(){
         return this.connection != null;
     }
-
+    /**
+    *This method checks if the users is able to login, given their status and ID. 
+    */
     public boolean isLogin(String userid, String opt) throws Exception{
 
         PreparedStatement ps = null;
