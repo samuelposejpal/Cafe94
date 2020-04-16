@@ -1,4 +1,5 @@
-package sample; /**
+package sample; 
+/**
  * Manager Homepage Controller Class.
  * @author Emily Wells
  */
