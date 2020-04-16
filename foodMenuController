@@ -26,7 +26,6 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import models.Customer;
 import javafx.fxml.Initializable;
 
 
@@ -97,82 +96,53 @@ public Spinner<Integer> OrangeJuiceClick;
     }
 
     @Override
-    public void initialize(ResourceBundle resourceBundle, URL url ) {
+    public void initialize(URL location, ResourceBundle resources) {
 
-        /**
-         * Setting spinner and items can have value from 1 to 100
-         * TO DO: do this for every item including special
-         */
         SpinnerValueFactory<Integer> DailySpecial = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 0);
         this.DailySpecialClick.setValueFactory(DailySpecial);
         DailySpecialClick.setEditable(true);
-        final int initialValue = 0;
-    }
-    //        not sure that final int initialValue = 0 does something here, not sure how to get value of items
-    @Override
-    public void initialize(ResourceBundle resourceBundle, URL url ) {
+
         SpinnerValueFactory<Integer> GarlicBread = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 0);
         this.GarlicBreadClick.setValueFactory(GarlicBread);
         GarlicBreadClick.setEditable(true);
-        final int initialValue = 0;
-    }
-    @Override
-    public void initialize(ResourceBundle resourceBundle, URL url ) {
+
         SpinnerValueFactory<Integer> TomatoSoup = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 0);
         this.TomatoSoupClick.setValueFactory(TomatoSoup);
         TomatoSoupClick.setEditable(true);
-        final int initialValue = 0;
-    }
-    @Override
-    public void initialize(ResourceBundle resourceBundle, URL url ) {
+
         SpinnerValueFactory<Integer> CheesburgerAndChips = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 0);
         this.CheesburgerAndChipsClick.setValueFactory(CheesburgerAndChips);
         CheesburgerAndChipsClick.setEditable(true);
-        final int initialValue = 0;
-    }
-    @Override
-    public void initialize(ResourceBundle resourceBundle, URL url ) {
+
         SpinnerValueFactory<Integer> CaesarSalad = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 0);
         this.CaesarSaladClick.setValueFactory(CaesarSalad);
         CaesarSaladClick.setEditable(true);
-        final int initialValue = 0;
-    }
-    @Override
-    public void initialize(ResourceBundle resourceBundle, URL url ) {
+
         SpinnerValueFactory<Integer> SpagettiBolognese = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 0);
         this.SpagettiBologneseClick.setValueFactory(SpagettiBolognese);
         SpagettiBologneseClick.setEditable(true);
-        final int initialValue = 0;
-    }
-    @Override
-    public void initialize(ResourceBundle resourceBundle, URL url ) {
+
         SpinnerValueFactory<Integer> FishAndChips = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 0);
         this.FishAndChipsClick.setValueFactory(FishAndChips);
         FishAndChipsClick.setEditable(true);
-        final int initialValue = 0;
-    }
-    @Override
-    public void initialize(ResourceBundle resourceBundle, URL url ) {
+
         SpinnerValueFactory<Integer> VegetarianChilli = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 0);
         this.VegetarianChilliClick.setValueFactory(VegetarianChilli);
         VegetarianChilliClick.setEditable(true);
-        final int initialValue = 0;
-    }
-    @Override
-    public void initialize(ResourceBundle resourceBundle, URL url ) {
+
         SpinnerValueFactory<Integer> CocaCola = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 0);
         this.CocaColaClick.setValueFactory(CocaCola);
         CocaColaClick.setEditable(true);
-        final int initialValue = 0;
-    }
-    @Override
-    public void initialize(ResourceBundle resourceBundle, URL url ) {
+
         SpinnerValueFactory<Integer>  OrangeJuice = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 0);
         this.OrangeJuiceClick.setValueFactory(OrangeJuice);
         OrangeJuiceClick.setEditable(true);
-        final int initialValue = 0;
+
+
+
+
+
+
+
     }
-
-
-
-    }
+}
