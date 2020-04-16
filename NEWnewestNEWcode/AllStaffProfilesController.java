@@ -22,7 +22,9 @@ import java.net.URL;
 import java.sql.*;
 import java.util.ResourceBundle;
 
-
+/**
+*This class will allow the manager to view, edit and delete staff profiles.
+*/
 public class AllStaffProfilesController {
     @FXML private TableView<Staff> staffProfiles;
     @FXML private TableColumn<Staff, String> userID;
@@ -163,6 +165,8 @@ public class AllStaffProfilesController {
 
     /**
      * This will take the Manager back to the staff homepage.
+     * @param event
+     * @throws IOException
      */
     public void homeButtonPushed(ActionEvent event) throws IOException {
         SceneChanger sc = new SceneChanger();
@@ -170,7 +174,8 @@ public class AllStaffProfilesController {
     }
 
     /**
-     * Refresh the displayed countries.
+     * Refresh the displayed profiles
+     * @throws SQLException
      */
     private void refreshTable() throws SQLException {
         // Clear the displayed list
@@ -180,7 +185,7 @@ public class AllStaffProfilesController {
     }
 
     /**
-     * Handle the behavior of the delete button.
+     *
      * This will delete the selected staff member and refresh the displayed table.
      */
     private void deleteButtonPushed(ActionEvent event) throws SQLException {
@@ -231,14 +236,5 @@ public class AllStaffProfilesController {
         this.staffType.setText(staff.get_staffType());
     }
 
-
-    public void preloadData(User user) {
-
-    }
-
-
-    public void initialize() {
-
-    }
 }
 
