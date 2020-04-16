@@ -1,7 +1,7 @@
 package sample;
 /*
 Controller class for Login view.
-@author Emily Wells
+@author Emily Wells and Niamh Murphy
  */
 
 import javafx.collections.FXCollections;
@@ -51,7 +51,10 @@ public class LoginController implements Initializable {
 
     }
 
-    //This will allow a user to login to the system and take them to the home page.
+    /**
+    *This will allow a user to login to the system and take them to the home page.
+    *@event
+    */
     public void loginButtonPushed(ActionEvent event) throws IOException {
         try{
             if(this.loginModel.isLogin(this.userID.getText(), ((option)this.userType.getValue()).toString())){
@@ -78,7 +81,9 @@ public class LoginController implements Initializable {
         }
     }
 
-    //code for customer login
+    /**
+    *This is a helper method for a customer login.
+    */
     public void customerLogin(){
         try{
             Stage userStage = new Stage();
@@ -100,7 +105,9 @@ public class LoginController implements Initializable {
 
     }
 
-    //code for Staff login
+    /**
+    *This is a helper method for a staff login.
+    */
     public void staffLogin(){
         try{
 
@@ -123,7 +130,7 @@ public class LoginController implements Initializable {
     }
 
     /*
-     * This method will take the manager to their appropriate login page.
+     * This is a helper method for the manager to login.
      * @param event
      */
     public void managerLogin(){
