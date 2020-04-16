@@ -1,3 +1,9 @@
+/**
+ * Controller that handles events and scene changes in the customer view of the menu.
+ * Customers can choose item quantity and whether it is a delivery or collection order.
+ * @author Ellie Macdonald
+ */
+
 package sample;
 
 
@@ -20,9 +26,7 @@ import javax.xml.soap.Text;
 
 public class customerFoodMenuController implements Initializable {
 
-    @FXML
-    private Button menuContinueButton;
-
+  
     @FXML
     private Spinner<?> garlicBreadSpin;
 
@@ -53,19 +57,23 @@ public class customerFoodMenuController implements Initializable {
     private Spinner<?> chefSpinner;
 
         /**
-         * When this method is called, it will change the Scene to
-         * foodSelection.fxml. continue button pressed.
+         * When the home button is pressed, it will change the Scene to
+         * customerMenu.fxml. 
          */
       public void homeButtonPushed(ActionEvent event) throws Exception {
-            Parent waiterMenuParent = FXMLLoader.load(getClass().getResource("waiterMenu.fxml"));
-            Scene waiterMenuScene = new Scene(waiterMenuParent);
+            Parent customerMenuuParent = FXMLLoader.load(getClass().getResource("customerMenu.fxml"));
+            Scene customerMenuScene = new Scene(customerMenuParent);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setMaximized(true);
-            window.setScene(waiterMenuScene);
-            window.setTitle("Waiter Menu");
+            window.setScene(customerMenuScene);
+            window.setTitle("customer Menu");
             window.show();
         }
 
+         /**
+         * When the backbutton is pressed, it will change the Scene to
+         * customerMenu.fxml. 
+         */
     @FXML
     public void goBackCustomer(ActionEvent event) throws IOException {
         Parent backOne = FXMLLoader.load(getClass().getResource("customerMenu.fxml"));
@@ -75,23 +83,13 @@ public class customerFoodMenuController implements Initializable {
         window.setScene(backOneScene);
         window.show();
     }
-
+    
+         /**
+         * When the delivery button is pressed, it will change the Scene to
+         * thankyouOrderDelivery.fxml 
+         */
 
     public void deliveryChoiceButtonPressed(ActionEvent event) throws Exception {
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("thankyouOrder.fxml"));
-        Parent parent = loader.load();
-
-        Scene scene = new Scene(parent);
-
-        //get the stage from the event that was passed in.
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setMaximized(true);
-        stage.setTitle("Order Summary");
-        stage.setScene(scene);
-        stage.show();
-    }
-    public void collectionChoiceButtonPressed(ActionEvent event) throws Exception {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("thankyouOrderDelivery.fxml"));
         Parent parent = loader.load();
@@ -105,16 +103,26 @@ public class customerFoodMenuController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-          /*  Parent foodSelectParent = FXMLLoader.load(getClass().getResource("foodSelection.fxml"));
-            Scene foodSelectScene = new Scene(foodSelectParent);
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setMaximized(true);
-            window.setScene(foodSelectScene);
-            window.setTitle("Order Summary");
-            window.show();
-        }
+    
+         /**
+         * When the collection choice button is pressed, it will change the Scene to
+         * thankyouOrderDelivery 
+         */
+    public void collectionChoiceButtonPressed(ActionEvent event) throws Exception {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("thankyouOrder.fxml"));
+        Parent parent = loader.load();
 
-*/
+        Scene scene = new Scene(parent);
+
+        //get the stage from the event that was passed in.
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setMaximized(true);
+        stage.setTitle("Order Summary");
+        stage.setScene(scene);
+        stage.show();
+    }
+          
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
