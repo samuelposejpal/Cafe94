@@ -1,6 +1,6 @@
 package sample; /**
  * Edit profile (customer view) Controller Class.
- * @author Emily Wells
+ * @author Emily Wells Niamh Murphy
  */
 
 import javafx.event.ActionEvent;
@@ -76,7 +76,7 @@ public class EditProfileController extends ControllerClass implements Initializa
     }
 
     /**
-     * This will take the user to their profile page if they have one.
+     * This will take the user to their profile page.
      */
     public void goToProfileButtonPushed(ActionEvent event) throws IOException {
         SceneChanger sc = new SceneChanger();
