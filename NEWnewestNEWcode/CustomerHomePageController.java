@@ -45,16 +45,17 @@ public class CustomerHomePageController implements Initializable {
         sc.changeScenes(event, "loginPage.fxml", "Login Page");
     }
 
-    //TODO
+   
     /*
      * This will take the customer to the menu page.
      * @param event
      */
-    /*public void menuButtonPushed(ActionEvent event) throws IOException {
+    
+    public void menuButtonPushed(ActionEvent event) throws IOException {
         //create a scene base on the loaded FXML scene graph
         SceneChanger sc = new SceneChanger();
-        sc.changeScenes(event, "xxx.fxml", "Menu Page");
-    }*/
+        sc.changeScenes(event, "foodMenu.fxml", "Menu Page");
+    }
 
     /*
      * This will take the customer to a menu page where they can view previous bookings and orders.
