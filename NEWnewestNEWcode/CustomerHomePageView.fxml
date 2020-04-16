@@ -38,7 +38,7 @@
         </HBox>
         <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #E14F30;" GridPane.columnSpan="3" GridPane.rowIndex="4">
             <children>
-                <Label fx:id="errMsgLabel" text="Label" />
+                <Label text="Label" />
             </children></HBox>
         <HBox prefHeight="46.0" prefWidth="730.0" GridPane.columnSpan="3" GridPane.rowIndex="1" />
         <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="3" />
@@ -57,12 +57,12 @@
                 <RowConstraints maxHeight="107.5999755859375" minHeight="10.0" prefHeight="57.39998779296877" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="405.0" style="-fx-background-color: #80B8D1;" text="Menu " textFill="WHITE" GridPane.columnSpan="2">
+                <Button fx:id="menuButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="405.0" style="-fx-background-color: #80B8D1;" text="Menu " textFill="WHITE" GridPane.columnSpan="2">
                     <font>
                         <Font size="20.0" />
                     </font>
                 </Button>
-                <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="423.0" style="-fx-background-color: #80B8D1;" text="History" textFill="WHITE" GridPane.columnSpan="2" GridPane.rowIndex="6">
+                <Button fx:id="historyButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="423.0" style="-fx-background-color: #80B8D1;" text="History" textFill="WHITE" GridPane.columnSpan="2" GridPane.rowIndex="6">
                     <font>
                         <Font size="20.0" />
                     </font>
@@ -72,7 +72,7 @@
                         <Font size="20.0" />
                     </font>
                 </Button>
-                <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="392.0" style="-fx-background-color: #80B8D1;" text="Bookings" textFill="WHITE" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                <Button fx:id="bookingsButton" mnemonicParsing="false" onAction="#bookingButtonPushed" prefHeight="44.0" prefWidth="392.0" style="-fx-background-color: #80B8D1;" text="Bookings" textFill="WHITE" GridPane.columnSpan="2" GridPane.rowIndex="2">
                     <font>
                         <Font size="20.0" />
                     </font>

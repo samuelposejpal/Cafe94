@@ -8,22 +8,28 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class DeliveryDriverHomepageController  {
-
+public class DeliveryDriverHomepageController implements Initializable {
+    @FXML
+    private Label errMsgLabel;
     @FXML
     private Button currentOrders;
     @FXML
     private Button pastOrders;
     @FXML
     private Button profile;
-    @FXML
-    private Button logout;
 
+    /**
+     * Initialises controller class.
+     */
+    @Override
+    public void initialize(URL url, ResourceBundle rb){
+
+        errMsgLabel.setText("");
+
+    }
 
     /**
      * This method will take the delivery driver to their profile page.
@@ -31,16 +37,4 @@ public class DeliveryDriverHomepageController  {
     public void profileButtonPushed(ActionEvent event){
         //TODO
     }
-
-    /*
-     * This will take the staff member to the login page.
-     * @param event
-     */
-    public void logoutButtonPushed(ActionEvent event) throws IOException {
-
-        //create a scene base on the loaded FXML scene graph
-        SceneChanger sc = new SceneChanger();
-        sc.changeScenes(event, "/sample/loginPage.fxml", "Login Page");
-    }
 }
-

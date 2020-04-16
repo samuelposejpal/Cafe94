@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="729.0" style="-fx-background-color: #DE6B53;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.thankyouOrderController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="729.0" style="-fx-background-color: #DE6B53;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <columnConstraints>
         <ColumnConstraints hgrow="ALWAYS" maxWidth="176.79996337890626" minWidth="5.333350563049315" prefWidth="14.2" />
         <ColumnConstraints hgrow="ALWAYS" maxWidth="709.8666494369506" minWidth="10.0" prefWidth="699.8" />
@@ -36,7 +36,7 @@
                 <HBox alignment="CENTER" prefHeight="80.0" prefWidth="418.0" />
                 <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                     <children>
-                        <Button mnemonicParsing="false" onAction="#goHomePage" style="-fx-background-color: #80B8D1;" text="Home " textFill="WHITE">
+                        <Button mnemonicParsing="false" style="-fx-background-color: #80B8D1;" text="Home " textFill="WHITE">
                             <font>
                                 <Font name="System Bold" size="14.0" />
                             </font>
@@ -47,7 +47,15 @@
         </HBox>
         <HBox alignment="CENTER_LEFT" prefHeight="72.0" prefWidth="730.0" style="-fx-background-color: #E14F30;" GridPane.columnSpan="3" GridPane.rowIndex="4">
             <children>
-            <HBox alignment="CENTER" prefHeight="58.0" prefWidth="130.0" />
+            <HBox alignment="CENTER" prefHeight="58.0" prefWidth="130.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="55.0" style="-fx-background-color: #80B8D1;" text="&lt;--" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
             </children></HBox>
       <GridPane alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
         <columnConstraints>
@@ -63,7 +71,7 @@
          <children>
             <HBox alignment="CENTER" prefHeight="132.0" prefWidth="644.0" style="-fx-background-color: #80B8D1;" GridPane.columnIndex="1">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Request for Collection Received. Thank-you for your order!" textAlignment="CENTER" wrappingWidth="394.9366855621338">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Request Received Thank-you for your order!" textAlignment="CENTER" wrappingWidth="394.9366855621338">
                      <font>
                         <Font size="32.0" />
                      </font>
@@ -72,7 +80,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="132.0" prefWidth="644.0" style="-fx-background-color: #fff;" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Your order will be ready to Collect in half an hour from now." textAlignment="CENTER" wrappingWidth="167.92886352539062">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Approved/Denied. Your estimated delivery/pick-up time is 'half an hour from now'" textAlignment="CENTER" wrappingWidth="167.92886352539062">
                      <font>
                         <Font size="18.0" />
                      </font>

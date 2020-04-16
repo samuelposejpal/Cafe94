@@ -9,7 +9,6 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -23,9 +22,10 @@ import java.net.URL;
 import java.sql.*;
 import java.util.ResourceBundle;
 
+
 public class AllStaffProfilesController {
     @FXML private TableView<Staff> staffProfiles;
-    @FXML private TableColumn<Staff, Integer> userID;
+    @FXML private TableColumn<Staff, String> userID;
     @FXML private TableColumn<Staff, String> firstName;
     @FXML private TableColumn<Staff, String> lastName;
     @FXML private TableColumn<Staff, String> staffType;
@@ -36,6 +36,8 @@ public class AllStaffProfilesController {
     @FXML private Button logout;
     @FXML private Button home;
     private Staff staff;
+    private Connection connection;
+    private PreparedStatement pst;
 
     /**
      * Initialises the controller class and loads the staff profiles into the table.
@@ -46,7 +48,7 @@ public class AllStaffProfilesController {
         deleteProfile.setDisable(true);
 
         //configure the table columns
-        userID.setCellValueFactory(new PropertyValueFactory<Staff, Integer>("userID"));
+        userID.setCellValueFactory(new PropertyValueFactory<Staff, String>("userID"));
         firstName.setCellValueFactory(new PropertyValueFactory<Staff, String>("firstName"));
         lastName.setCellValueFactory(new PropertyValueFactory<Staff, String>("lastName"));
         staffType.setCellValueFactory(new PropertyValueFactory<Staff, String>("staffType"));
@@ -79,7 +81,7 @@ public class AllStaffProfilesController {
             statement = conn.createStatement();
 
             //create SQL query
-            rs = statement.executeQuery("SELECT 'ID' 'first_name' 'last_name' 'Stafftype' FROM UserProfile WHERE UserType = 'Staff'");
+            rs = statement.executeQuery("SELECT 'ID' 'first_name' 'last_name' 'StaffType' FROM UserProfile WHERE UserType = 'Staff'");
 
             //create a staff object for each record that is loctated in the table.
             while(rs.next()){
@@ -101,7 +103,7 @@ public class AllStaffProfilesController {
             if(rs != null) rs.close();
 
         }
-        userID.setCellValueFactory(new PropertyValueFactory<Staff, Integer>("ID"));
+        userID.setCellValueFactory(new PropertyValueFactory<Staff, String>("ID"));
         firstName.setCellValueFactory(new PropertyValueFactory<Staff, String>("first_name"));
         lastName.setCellValueFactory(new PropertyValueFactory<Staff, String>("last_name"));
         staffType.setCellValueFactory(new PropertyValueFactory<Staff, String>("staffType"));
@@ -121,7 +123,7 @@ public class AllStaffProfilesController {
         }
         else{
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/EditStaffProfile.fxml"));
+            loader.setLocation(getClass().getResource("EditStaffProfile.fxml"));
             Parent parent = loader.load();
 
             Scene scene = new Scene(parent);
@@ -145,7 +147,7 @@ public class AllStaffProfilesController {
      */
     public void createProfileButtonPushed(ActionEvent event) throws Exception {
         SceneChanger sc = new SceneChanger();
-        sc.changeScenes(event, "/sample/NewStaffProfile.fxml", "New profile Page");
+        sc.changeScenes(event, "NewStaffProfile.fxml", "New profile Page");
     }
 
     /**
@@ -156,7 +158,7 @@ public class AllStaffProfilesController {
     public void logoutButtonPushed(ActionEvent event) throws IOException {
 
         SceneChanger sc = new SceneChanger();
-        sc.changeScenes(event, "/sample/loginPage.fxml", "Login Page");
+        sc.changeScenes(event, "loginPage.fxml", "Login Page");
     }
 
     /**
@@ -164,7 +166,7 @@ public class AllStaffProfilesController {
      */
     public void homeButtonPushed(ActionEvent event) throws IOException {
         SceneChanger sc = new SceneChanger();
-        sc.changeScenes(event, "/sample/StaffHome.fxml", "Homepage");
+        sc.changeScenes(event, "StaffHome.fxml", "Homepage");
     }
 
     /**
@@ -181,7 +183,7 @@ public class AllStaffProfilesController {
      * Handle the behavior of the delete button.
      * This will delete the selected staff member and refresh the displayed table.
      */
-    private void deleteButtonPushed() throws SQLException {
+    private void deleteButtonPushed(ActionEvent event) throws SQLException {
         // Get the selected staff item in the table.
         Staff staff = this.staffProfiles.getSelectionModel().getSelectedItem();
 
@@ -194,7 +196,7 @@ public class AllStaffProfilesController {
         else {
             staffSelectedEdit();
             // Remove the staff selected.
-            staff.deleteUserInDB(staff.getUserID());
+            staff.deleteUserInDB(staff.get_userID());
         }
 
         // Refresh the updated table
@@ -223,10 +225,10 @@ public class AllStaffProfilesController {
      */
     public void preloadData(Staff staff) {
         this.staff = staff;
-        this.firstName.setText(staff.getFirstName());
-        this.lastName.setText(staff.getLastName());
-        this.userID.setText(staff.getUserID());
-        this.staffType.setText(staff.getStaffType());
+        this.firstName.setText(staff.get_firstName());
+        this.lastName.setText(staff.get_lastName());
+        this.userID.setText(staff.get_userID());
+        this.staffType.setText(staff.get_staffType());
     }
 
 

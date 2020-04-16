@@ -23,19 +23,18 @@ public class CustomerHomePageController implements Initializable {
     @FXML private Button bookingsButton;
     @FXML private Button logoutButton;
 
-    /*
+    /**
      * This will take the customer to their profile page.
      * @param event
      */
     public void profileButtonPushed(ActionEvent event) throws IOException {
-
         //create a scene base on the loaded FXML scene graph
         SceneChanger sc = new SceneChanger();
         /*EditProfileController editProfile = new EditProfileController();*/
-        sc.changeScenes(event, "/sample/sample.fxml", "Profile Page");
+        sc.changeScenes(event, "customerProfile .fxml", "Profile Page");
     }
 
-    /*
+    /**
      * This will take the customer to the login page.
      * @param event
      */
@@ -43,7 +42,7 @@ public class CustomerHomePageController implements Initializable {
 
         //create a scene base on the loaded FXML scene graph
         SceneChanger sc = new SceneChanger();
-        sc.changeScenes(event, "/sample/loginPage.fxml", "Login Page");
+        sc.changeScenes(event, "loginPage.fxml", "Login Page");
     }
 
     //TODO
@@ -52,7 +51,6 @@ public class CustomerHomePageController implements Initializable {
      * @param event
      */
     /*public void menuButtonPushed(ActionEvent event) throws IOException {
-
         //create a scene base on the loaded FXML scene graph
         SceneChanger sc = new SceneChanger();
         sc.changeScenes(event, "xxx.fxml", "Menu Page");
@@ -63,7 +61,6 @@ public class CustomerHomePageController implements Initializable {
      * @param event
      */
     /*public void historyButtonPushed(ActionEvent event) throws IOException {
-
         //create a scene base on the loaded FXML scene graph
         SceneChanger sc = new SceneChanger();
         sc.changeScenes(event, "xxx.fxml", "History Page");
@@ -73,20 +70,19 @@ public class CustomerHomePageController implements Initializable {
      * This will take the customer bookings page where they can request a table booking.
      * @param event
      */
-    /*public void bookingButtonPushed(ActionEvent event) throws IOException {
-
+    public void bookingButtonPushed(ActionEvent event) throws IOException {
         //create a scene base on the loaded FXML scene graph
         SceneChanger sc = new SceneChanger();
-        sc.changeScenes(event, "xxx.fxml", "Bookings Page");
-    }*/
+        sc.changeScenes(event, "bookingMenu.fxml", "Bookings Page");
+    }
 
     /**
      * Initialises controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb){
+
         errMsgLabel.setText("");
 
     }
 }
-

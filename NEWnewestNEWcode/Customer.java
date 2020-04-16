@@ -9,6 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import sample.dbconnection;
 
 /**
  * This class represents the Customer with a first and last name, user ID and address.
@@ -17,7 +18,7 @@ import java.util.logging.Logger;
  */
 public class Customer extends User {
     private static String address;
-
+    loginModel loginModel = new loginModel();
     /**
      * Create a customer object with an ID, name and address.
      * @param userID_
@@ -35,9 +36,9 @@ public class Customer extends User {
      * @param userID
      * @return boolean
      */
-    @Override
+    //@Override
     public boolean login(String userID){
-        String ID = this.getUserID();
+        String ID = this.get_userID();
         return ID == userID;
     }
 
@@ -45,13 +46,13 @@ public class Customer extends User {
      * For changing the address of a customer.
      * @param address
      */
-    public void setAddress(String address) { address = Customer.address;}
+    public void set_address(String address) { address = Customer.address;}
 
     /**
      * For retrieving the address of a customer.
      * @return
      */
-    public static String getAddress() { return address;}
+    public static String get_address() { return address;}
 
     /**
      * This method will write the instance of the customer into the database.
@@ -60,12 +61,12 @@ public class Customer extends User {
     public void insertUserInDB() throws SQLException {
         Connection con = null;
         PreparedStatement preparedStatement = null;
-        String id = getUserID();
+        String id = get_userID();
 
         try {
             //Connect to the Database.
-            Class.forName("com.mysql . jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhoast:3306/RestaurantDB", "root", "6Ylime93");
+            Class.forName("com.mysql.jc.jdbc.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhoast:3306/Restaurant", "root", "Aishai3f");
 
             //create a string that holds the user query with 'X' as user inputs.
             String sql = "INSERT INTO UserProfile (userID, firstName, lastName, address)" + "WHERE ID = id AND UserType = Customer" + "VALUES (x, x, x)";
@@ -74,7 +75,7 @@ public class Customer extends User {
             preparedStatement = con.prepareStatement(sql);
 
             //bind the values to the parameters
-            preparedStatement.setString(1, (userID));
+            preparedStatement.setString(1, String.valueOf(userID));
             preparedStatement.setString(2, firstName);
             preparedStatement.setString(3, lastName);
             preparedStatement.setString(4, address);
@@ -100,24 +101,22 @@ public class Customer extends User {
 
         try {
             //Connect to the Database.
-            Class.forName("com.mysql . jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/RestaurantDB", "root", "6Ylime93");
-
+            dbconnection.getConnection();
             //create a string that holds the user query with 'X' as user inputs.
-            String sql = "UPDATE user SET firstName = x, lastName = x, address = x" + "WHERE ID = x AND UserType = Customer";
+            String sql = "UPDATE UserProfile SET firstName = x, lastName = x, address = x" + "WHERE ID = x AND UserType = Customer";
 
             //prepare the query
             preparedStatement = con.prepareStatement(sql);
 
             //bind the values to the parameters
-            preparedStatement.setString(1, (userID));
+            preparedStatement.setString(1, String.valueOf(userID));
             preparedStatement.setString(2, firstName);
             preparedStatement.setString(3, lastName);
             preparedStatement.setString(4, address);
 
             preparedStatement.executeUpdate();
             preparedStatement.close();
-        } catch (SQLException | ClassNotFoundException e) {
+        } catch (SQLException e) {
             Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, e);
         } finally {
             if (con != null) con.close();
@@ -132,12 +131,12 @@ public class Customer extends User {
     public void deleteCustomerInDB() throws SQLException {
         Connection con = null;
         PreparedStatement preparedStatement = null;
-        String id = getUserID();
+        String id = get_userID();
 
         try {
             //Connect to the Database.
-            Class.forName("com.mysql . jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhoast:3306/RestaurantDB", "root", "6Ylime93");
+            Class.forName("com.mysql.jc.jdbc.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhoast:3306/Restaurant", "root", "Aishai3f");
 
             //create a string that holds the user query with 'X' as user inputs.
             String sql = "DELETE from UserProfiles WHERE 'ID' = " + id + " AND UserType = Customer";

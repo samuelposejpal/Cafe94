@@ -31,7 +31,7 @@
                                         <TableColumn fx:id="staffType" prefWidth="156.0" text="Staff Type " />
                                     </columns>
                                 </TableView>
-                                <Button fx:id="editProfile" layoutX="414.0" layoutY="220.0" mnemonicParsing="false" onAction="#loadStaff" text="Edit Profile" />
+                                <Button fx:id="editProfile" layoutX="414.0" layoutY="220.0" mnemonicParsing="false" onAction="#editProfileButtonPushed" text="Edit Profile" />
                             </children></AnchorPane>
                     </children></HBox>
                 <HBox layoutX="10.0" layoutY="110.0" prefHeight="55.0" prefWidth="600.0" style="-fx-background-color: #E14F30;">

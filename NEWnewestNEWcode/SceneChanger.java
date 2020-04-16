@@ -104,7 +104,6 @@ public class SceneChanger {
         stage.setScene(scene);
         stage.show();
     }
-
     public static int getLoggedInUser(int id){
         int userNum =  Integer.parseInt(findStartNum(id));
         return userNum;
@@ -129,7 +128,7 @@ public class SceneChanger {
 
         @Override
         public void start(Stage primaryStage) throws Exception{
-            Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("customerProfile .fxml"));
             primaryStage.setTitle("Hello World");
             primaryStage.setScene(new Scene(root, 300, 275));
             primaryStage.show();

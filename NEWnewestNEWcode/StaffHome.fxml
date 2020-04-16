@@ -35,9 +35,11 @@
                         <HBox />
                         <AnchorPane prefHeight="276.0" prefWidth="600.0">
                             <children>
+                                <Button fx:id="managerButton" layoutX="251.0" layoutY="47.0" mnemonicParsing="false" onAction="#managerButtonPushed" prefHeight="27.0" prefWidth="98.0" text="Manager" />
                                 <Button fx:id="chefButton" layoutX="251.0" layoutY="96.0" mnemonicParsing="false" onAction="#chefButtonPushed" prefHeight="27.0" prefWidth="98.0" text="Chef" />
                                 <Button fx:id="waiterButton" layoutX="251.0" layoutY="148.0" mnemonicParsing="false" onAction="#waiterButtonPushed" prefHeight="27.0" prefWidth="98.0" text="Waiter" />
                                 <Button fx:id="deliveryDriverButton" layoutX="251.0" layoutY="196.0" mnemonicParsing="false" onAction="#deliveryDriverButtonPushed" text="Delivery Driver" />
+                                <Label fx:id="status1" layoutX="457.0" layoutY="175.0" text="Label" />
                             </children></AnchorPane>
                     </children></HBox>
                 <HBox layoutX="10.0" layoutY="110.0" prefHeight="55.0" prefWidth="600.0" style="-fx-background-color: #E14F30;">
@@ -45,6 +47,7 @@
                         <AnchorPane prefHeight="54.0" prefWidth="600.0">
                             <children>
                                 <Button fx:id="logoutButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#logoutButtonPushed" text="Logout" />
+                                <Label fx:id="status2" layoutX="528.0" layoutY="19.0" text="Label" />
                             </children></AnchorPane>
                     </children></HBox>
             </children></VBox>

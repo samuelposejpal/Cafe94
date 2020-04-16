@@ -23,8 +23,7 @@ public class DeliveryDriver extends Staff {
      * @return
      */
     public String getAddress(){
-        String address = Customer.getAddress();
+        String address = Customer.get_address();
         return address;
     }
 }
-

@@ -11,6 +11,7 @@ import javafx.scene.control.Label;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
 import java.util.ResourceBundle;
 
 public class StaffProfileController implements Initializable {
@@ -21,20 +22,17 @@ public class StaffProfileController implements Initializable {
     @FXML Label userID;
     @FXML private Button homeButton;
     @FXML private Button logoutButton;
-    @FXML private Label errMsgLabel;
+
 
     private Staff staff;
+    private Connection connection;
 
 
     /**
      * Initializes the controller class.
      */
     public void initialize (URL url, ResourceBundle rb){
-        if (this.HomeModel.isDBConnected()) {
-            this.errMsgLabel.setText("Connected to Database");
-        } else {
-            errMsgLabel.setText("Not Connected to Database");
-        }
+
     }
     /**
      * Preloads the data for the current customer.
@@ -45,9 +43,9 @@ public class StaffProfileController implements Initializable {
         this.staff = staff;
 
         // Update the GUI to show the existing data.
-        firstName.setText(staff.getFirstName());
-        lastName.setText(staff.getLastName());
-        userID.setText(staff.getUserID());
+        firstName.setText(staff.get_firstName());
+        lastName.setText(staff.get_lastName());
+        userID.setText(staff.get_userID());
     }
 
     /**
@@ -56,7 +54,7 @@ public class StaffProfileController implements Initializable {
     public void homeButtonPushed(ActionEvent event) throws IOException {
         //create a scene base on the loaded FXML scene graph
         SceneChanger sc = new SceneChanger();
-        sc.changeScenes(event, "/sample/StaffHome.fxml", "Homepage");
+        sc.changeScenes(event, "StaffHome.fxml", "Homepage");
     }
 
     /**
@@ -65,7 +63,7 @@ public class StaffProfileController implements Initializable {
     public void logoutButtonPushed(ActionEvent event) throws IOException {
         //create a scene base on the loaded FXML scene graph
         SceneChanger sc = new SceneChanger();
-        sc.changeScenes(event, "/sample/loginPage.fxml", "Login Page");
+        sc.changeScenes(event, "loginPage.fxml", "Login Page");
     }
 }
 

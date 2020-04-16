@@ -58,7 +58,7 @@ public class EditProfileController extends ControllerClass implements Initializa
                 customer.insertUserInDB();
             }
             SceneChanger sc = new SceneChanger();
-            sc.changeScenes(event, "sample/sample.fxml", "profileView");
+            sc.changeScenes(event, "customerProfile.fxml", "profileView");
         }
         catch (SQLException e) {
             errMsgLabel.setText(e.getMessage());
@@ -72,7 +72,7 @@ public class EditProfileController extends ControllerClass implements Initializa
         //create a scene base on the loaded FXML scene graph
         SceneChanger sc = new SceneChanger();
         /*EditProfileController editProfile = new EditProfileController();*/
-        sc.changeScenes(event, "/sample/customerHomePageView.fxml", "Homepage");
+        sc.changeScenes(event, "CustomerMenu.fxml", "Homepage");
     }
 
     /**
@@ -80,7 +80,7 @@ public class EditProfileController extends ControllerClass implements Initializa
      */
     public void goToProfileButtonPushed(ActionEvent event) throws IOException {
         SceneChanger sc = new SceneChanger();
-        sc.changeScenes(event, "/sample/sample.fxml", "profileView");
+        sc.changeScenes(event, "customerProfile.fxml", "profileView");
     }
 
     /**
@@ -93,7 +93,7 @@ public class EditProfileController extends ControllerClass implements Initializa
         int id = Integer.parseInt(userID.getText());
         customer.deleteCustomerInDB();
         LoginController loginPage = new LoginController();
-        sc.changeScenes(event, "sample/loginView.fxml", "LoginPage");
+        sc.changeScenes(event, "loginView.fxml", "LoginPage");
     }
 
     /**
@@ -106,10 +106,10 @@ public class EditProfileController extends ControllerClass implements Initializa
         this.customer = customer;
 
         // Update the GUI to show the existing data.
-        firstName.setText(customer.getFirstName());
-        lastName.setText(customer.getLastName());
-        userID.setText(customer.getUserID());
-        address.setText(customer.getAddress());
+        firstName.setText(customer.get_firstName());
+        lastName.setText(customer.get_lastName());
+        userID.setText(customer.get_userID());
+        address.setText(customer.get_address());
 
     }
 
@@ -126,9 +126,9 @@ public class EditProfileController extends ControllerClass implements Initializa
      * This method will read from the GUI fields and update the user object.
      */
     public void updateUser(){
-        customer.setFirstName(firstName.getText());
-        customer.setLastName(lastName.getText());
-        customer.setAddress(address.getText());
+        customer.set_firstName(firstName.getText());
+        customer.set_lastName(lastName.getText());
+        customer.set_address(address.getText());
     }
 
     /**
@@ -140,10 +140,10 @@ public class EditProfileController extends ControllerClass implements Initializa
         this.customer = customerToEdit;
 
         // Update the GUI to show the existing data.
-        firstName.setText(customer.getFirstName());
-        lastName.setText(customer.getLastName());
-        userID.setText(customer.getUserID());
-        address.setText(customer.getAddress());
+        firstName.setText(customer.get_firstName());
+        lastName.setText(customer.get_lastName());
+        userID.setText(customer.get_userID());
+        address.setText(customer.get_address());
 
     }
 
@@ -167,4 +167,3 @@ public class EditProfileController extends ControllerClass implements Initializa
 
     }
 }
-
